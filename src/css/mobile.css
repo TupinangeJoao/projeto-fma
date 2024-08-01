@@ -16,7 +16,7 @@
         justify-content: end;
         display: flex;
         left: 5%;
-        text-align: justify;
+        text-align: left;
         padding: 5px;
        overflow: hidden;
         max-width: 80vw;
