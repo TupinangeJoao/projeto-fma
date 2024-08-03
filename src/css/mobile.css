@@ -7,21 +7,71 @@
     }
 
     }
+main .homun {
+    display: none;
+    height: 100vh;
+}
 
-    .conteudo .nome-personagem {
-        font-size: 30px;
-        left: 20%;
-    }
-    .conteudo .descricao {
-        max-width: 600px;
-        font-family: 'Times New Roman', Times, serif;
-        font-size: 22px;
-        display: flex;
-        text-shadow: none;
-        color: white;
-        text-align: left;
-        
-    }
+main .homun.selecionado {
+    display: block;
+}
+
+main .homun .mImagem {
+    width: 90%;
+    height: 50%;
+    object-fit: contain;
+    
+}
+.conteudo {
+    position: absolute;
+    top: 0;
+    left: 2%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    min-height: 90vh;
+    max-width: 350px;
+    z-index: 1;
+}
+
+.conteudo .nome-personagem {
+    color: red;
+    font-size: 48px;
+    font-family: fantasy;
+    font-weight: 400;
+    margin-bottom: 20px;
+    font-variant: small-caps;
+    font-stretch: extra-condensed;
+    text-shadow: 
+    1px 1px 0 white,
+    -1px -1px 0 white,
+    -1px 1px 0 white,
+    1px -1px 0 white;
+}
+
+.conteudo .descricao {
+    color: black;
+    font-family: "Black Ops One", system-ui;
+    text-align: left;
+    line-height: 24px;
+    text-shadow: 
+    1px 1px 0 white,
+    -1px -1px 0 white,
+    -1px 1px 0 white,
+    1px -1px 0 white;
+}
+
+.conteudo .logo {
+    /*background-color: aquamarine;*/
+    background-image: url("../imagens/FMAB.png");
+    background-size: cover ;
+    overflow: hidden;
+    height: 100px;
+    width: 230px;
+    margin-bottom: 35px;
+}
+
 
     .botoes {
         display: flex;
