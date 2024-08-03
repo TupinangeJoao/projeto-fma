@@ -1,7 +1,7 @@
 @media (max-width: 769px) {
     main::after {
         background: linear-gradient(0deg, black 20%, rgba(0, 0, 0, 00) 65%) no-repeat;
-        max-height: 90%;
+        max-height: 100%;
         width: 100vw;
         overflow: hidden;
     }
@@ -19,7 +19,7 @@
         display: flex;
         text-shadow: none;
         color: white;
-        left: 0;
+        text-align: left;
         
     }
 
