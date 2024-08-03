@@ -62,8 +62,12 @@
             </div>
         </div>
         <div class="homun">
-            <img class="imagem" src="src/imagens/orgulho.jpg" alt="Orgulho">
-            <img class="mImagem" src="src/imagens/orgulho_mobilex.jpg">
+            <!-- <img class="imagem" src="src/imagens/orgulho.jpg" alt="Orgulho">
+            <img class="mImagem" src="src/imagens/orgulho_mobilex.jpg"> -->
+            <picture>
+            <source media="(max-width: 900px)" srcset="src/imagens/orgulho_mobilex.jpg" type="image/jpg" class="mImagem">
+            <img src="src/imagens/orgulho.jpg" class="imagem" alt="Orgulho">
+            </picture>
             <div class="conteudo">
                 <i class="logo"></i>
                 <h2 class="nome-personagem">Orgulho / Pride</h2>
