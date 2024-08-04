@@ -42,8 +42,8 @@ main .homun .mImagem {
 .conteudo .nome-personagem {
     color: red;
     font-size: 48px;
-    font-family: fantasy;
-    font-weight: 400;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: lighter;
     margin-bottom: 20px;
     font-variant: small-caps;
     font-stretch: extra-condensed;
