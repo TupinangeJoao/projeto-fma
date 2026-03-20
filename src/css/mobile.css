@@ -1,47 +1,53 @@
+
 @media (max-width: 500px) {
     body {
-        overflow-y: auto;
+        overflow: hidden;
     }
 
     main::after {
-        background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 10%, transparent 70%);
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 60%);
     }
 
     .conteudo {
-        position: relative;
-        left: 0;
-        bottom: 0;
-        margin-top: 60vh;
-        padding: 20px;
-        max-width: 100%;
-        align-items: center;
-        text-align: center;
-        z-index: 3;
+        position: absolute;
+        left: 20px;
+        bottom: 90px;
+        margin: 0;
+        padding: 0;
+        max-width: 85%;
+        text-align: left;
+        align-items: flex-start;
+        z-index: 5;
     }
 
     .conteudo .logo {
-        width: 180px;
-        height: 80px;
-        margin: 0 auto 10px auto;
+        width: 140px;
+        height: 60px;
+        margin-bottom: 5px;
+        background-position: left;
     }
 
     .conteudo .nome-personagem {
-        font-size: 28px;
-        margin-bottom: 10px;
+        font-size: 24px;
+        margin-bottom: 5px;
     }
 
     .conteudo .descricao {
-        font-size: 14px;
-        line-height: 20px;
-        background-color: rgba(0, 0, 0, 0.6);
+        font-size: 13px;
+        line-height: 1.4;
+        background: none;
         color: white;
-        text-shadow: none;
-        margin-bottom: 100px;
+        text-shadow: 1px 1px 2px black;
+        padding: 0;
+        margin-bottom: 0;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
     }
 
     .botoes {
         position: fixed;
-        top: auto;
         bottom: 0;
         left: 0;
         right: 0;
@@ -50,20 +56,17 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        background-color: rgba(0, 0, 0, 0.8);
+        background: linear-gradient(to top, black, rgba(0,0,0,0.7));
         transform: none;
         gap: 8px;
         z-index: 10;
+        top: auto;
     }
 
     .botoes .botao {
-        width: 45px;
-        height: 45px;
+        width: 42px;
+        height: 42px;
         margin: 0;
-    }
-
-    .botoes .botao.selecionado {
-        transform: scale(1.1);
     }
 
     .page2 {
@@ -73,6 +76,6 @@
     }
 
     .pagebutton {
-        width: 45px;
+        width: 40px;
     }
 }
