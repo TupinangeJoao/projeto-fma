@@ -1,23 +1,28 @@
+
 body {
     background-color: black;
     overflow: hidden;
+    margin: 0;
+    padding: 0;
+    font-family: "Secular One", sans-serif;
 }
 
 main::after {
-    background: linear-gradient(-233deg, rgba(0, 0, 0, 0.533) 20%, rgba(0, 0, 0, 0) 35%) no-repeat;
     content: "";
     position: fixed;
     top: 0;
     left: 0;
     min-height: 100vh;
     width: 100vw;
-    z-index: auto;
-    
+    background: linear-gradient(-233deg, rgba(0, 0, 0, 0.6) 20%, transparent 50%);
+    pointer-events: none; 
+    z-index: 2;
 }
 
 main .homun {
     display: none;
     height: 100vh;
+    width: 100vw;
 }
 
 main .homun.selecionado {
@@ -28,35 +33,36 @@ main .homun .imagem {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    
 }
 
 .conteudo {
     position: absolute;
-    top: 0;
-    left: 120px;
-
+    bottom: 50px;
+    left: 60px; 
     display: flex;
     flex-direction: column;
-    justify-content: end;
-    min-height: 100vh;
-    max-width: 380px;
-    z-index: 1;
+    justify-content: flex-end;
+    max-width: 450px;
+    z-index: 3;
+}
+
+.conteudo .logo {
+    background-image: url("../imagens/FMAB.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100px;
+    width: 230px;
+    margin-bottom: 20px;
 }
 
 .conteudo .nome-personagem {
     color: red;
     font-size: 48px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: Impact, sans-serif;
     font-weight: bolder;
-    margin-bottom: 20px;
+    margin: 0 0 20px 0;
     font-variant: small-caps;
-    font-stretch: condensed;
-    text-shadow: 
-    1px 1px 0 white,
-    -1px -1px 0 white,
-    -1px 1px 0 white,
-    1px -1px 0 white;
+    text-shadow: 2px 2px 0 white, -1px -1px 0 white;
 }
 
 .conteudo .descricao {
@@ -64,72 +70,72 @@ main .homun .imagem {
     font-family: "Black Ops One", system-ui;
     text-align: justify;
     line-height: 24px;
-    text-shadow: 
-    1px 1px 0 white,
-    -1px -1px 0 white,
-    -1px 1px 0 white,
-    1px -1px 0 white;
-}
-
-.conteudo .logo {
-    /*background-color: aquamarine;*/
-    background-image: url("../imagens/FMAB.png");
-    background-size: cover ;
-    overflow: hidden;
-    height: 100px;
-    width: 230px;
-    margin-bottom: 35px;
-}
-
-.botoes .botao.selecionado {
-    transform: scale(1.4);
-    box-shadow: 10px 10px 10px red;
-    gap: 5px;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 15px;
+    border-radius: 8px;
+    text-shadow: none;
 }
 
 .botoes {
     position: absolute;
-    top: 0%;
-    right: -5%;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
     display: flex;
     flex-direction: column;
-    max-height: 100vh;
-    width: 20%;
-    justify-content: center;
-    align-items: baseline;
-    gap: 10px;
-    background-color: black ( 0 ,0 ,0 ,0.3);
-    scale: 0.2;
-    z-index: 2;
-    
+    gap: 15px;
+    z-index: 4;
+    padding: 0;
+    list-style: none;
 }
 
 .botoes .botao {
-    border: none;
+    border: 3px solid transparent;
     background: none;
     cursor: pointer;
     border-radius: 50%;
-    opacity: 60%;
-    margin: 17%;
+    opacity: 0.6;
+    transition: 0.3s ease;
+    width: 70px; 
+    height: 70px;
+    padding: 0;
+    overflow: hidden;
 }
 
 .botoes .botao img {
-    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.botoes .botao:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.botoes .botao.selecionado {
+    transform: scale(1.25);
+    opacity: 1;
+    border-color: red;
+    box-shadow: 0 0 20px red;
+}
+
+.page2 {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 5;
+    list-style: none;
 }
 
 .pagebutton {
-        position: absolute;
-        scale: 0.08;
-        right: -38%;
-        top: -15%;
-        width: 100%;
-        margin: 0%;
-        padding: 0%;
-        opacity: 70%;
-        background: none;
-        border: none;
-        box-shadow: 0px 0px 1px red;
-        z-index: 2;
-        cursor: pointer;
-    }
+    width: 60px;
+    opacity: 0.7;
+    transition: 0.3s;
+    cursor: pointer;
+}
 
+.pagebutton:hover {
+    opacity: 1;
+    filter: drop-shadow(0 0 5px red);
+}
